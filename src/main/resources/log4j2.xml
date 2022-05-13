@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="ConsoleJSONAppender" target="SYSTEM_OUT">
+            <JsonLayout complete="false" compact="true" objectMessageAsJsonObject="true">
+<!--                <KeyValuePair key="myCustomField" value="myCustomValue" />-->
+            </JsonLayout>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="CONSOLE_JSON_APPENDER" level="TRACE" additivity="false">
+            <AppenderRef ref="ConsoleJSONAppender" />
+        </Logger>
+    </Loggers>
+</Configuration>
